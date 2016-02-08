@@ -3,7 +3,7 @@
 # We are in trouble if they are both smiling or 
 # if neither of them is smiling. Return True if we are in trouble. 
 
-def monkey_trouble(a_smile, b_smile)
+def monkey_trouble(a_smile, b_smile):
     # if both are either smiling or not    
     if a_smile == b_smile:
         # we are in trouble D:
@@ -15,3 +15,17 @@ def monkey_trouble(a_smile, b_smile)
 
 # can be shortened to 
 # return (a_smile == b_smile)
+
+# testing the function
+def funcTester(answer, expected):
+    # if the output is the same as the expected answer    
+    if answer == expected:
+        print "%r == %r Correct" % (answer, expected)
+    else:
+        print "%r != %r Incorrect" % (answer, expected)
+
+
+funcTester(monkey_trouble(True, True), True)
+funcTester(monkey_trouble(True, False), False)
+funcTester(monkey_trouble(False, False), True)
+funcTester(monkey_trouble(False, True), False)

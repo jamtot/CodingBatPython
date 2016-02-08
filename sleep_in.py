@@ -21,8 +21,21 @@ def orig_sleep_in(weekday, vacation):
 
 # rewote to be a lot shorter
 # this is why I need practice
-def sleep_in(weekday, vacation)
+def sleep_in(weekday, vacation):
     if not weekday or vacation:
         return True
     else:
         return False
+
+# testing the function
+def funcTester(answer, expected):
+    # if the output is the same as the expected answer    
+    if answer == expected:
+        print "%r == %r Correct" % (answer, expected)
+    else:
+        print "%r != %r Incorrect" % (answer, expected)
+
+funcTester(sleep_in(True,True), True)
+funcTester(sleep_in(False,True), True)
+funcTester(sleep_in(True,False), False)
+funcTester(sleep_in(False,False), True)
