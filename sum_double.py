@@ -15,9 +15,9 @@ def sum_double(a, b):
 def funcTester(answer, expected):
     # if the output is the same as the expected answer    
     if answer == expected:
-        print "%r == %d Correct" % (answer, expected)
+        print "%r == %r Correct" % (answer, expected)
     else:
-        print "%r != %d Incorrect" % (answer, expected)
+        print "%r != %r Incorrect" % (answer, expected)
 
 funcTester(sum_double(1, 2), 3)
 funcTester(sum_double(3, 2), 5)
