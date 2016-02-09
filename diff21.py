@@ -22,13 +22,14 @@ def samp_diff21(n):
     else:
         return (n-21)*2
 
-# testing the function
+# function tester - if the output matches the 
+# expected output, the answer is correct
 def funcTester(answer, expected):
     # if the output is the same as the expected answer    
     if answer == expected:
-        print "%r == %d Correct" % (answer, expected)
+        print "%r == %r Correct" % (answer, expected)
     else:
-        print "%r != %d Incorrect" % (answer, expected)
+        print "%r != %r Incorrect" % (answer, expected)
 
 funcTester(diff21(19), 2)
 funcTester(diff21(10), 11)
