@@ -4,11 +4,8 @@ from test import Tester
 
 def string_splosion(str):
     result = '' 
-    # this will be the range to slice to   
-    j = 1
     for i in range(len(str)):
-        result += str[:j]
-        j+=1
+        result += str[:i+1]
     return result
 
 
