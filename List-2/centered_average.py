@@ -9,7 +9,7 @@ length 3 or more.
 
 from test import Tester
 
-def centered_average(nums):
+def centered_average2(nums):
     mini = maxi = nums[0]
     sum = 0
     for num in nums:
@@ -19,6 +19,18 @@ def centered_average(nums):
     sum-=(maxi+mini)
     average = sum/(len(nums)-2)
     return average
+
+# shorter way of achieveing the same thing
+def centered_average(nums):
+    # sort the list
+    newNums = sorted(nums)
+    # cull the first and last, highest and lowest
+    keeping = newNums[1:(len(newNums)-1)]
+    sum = 0    
+    for num in keeping:
+        sum += num
+    return sum/len(keeping)
+    
     
 
 Tester(centered_average([1, 2, 3, 4, 100]), 3)
