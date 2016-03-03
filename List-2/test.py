@@ -8,3 +8,4 @@ class Tester:
             print "Correct."
         else:
             print "Incorrect."
+            print "%r != %r" % (actual, expected)
